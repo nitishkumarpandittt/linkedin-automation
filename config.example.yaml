@@ -1,0 +1,44 @@
+linkedin:
+  base_url: https://www.linkedin.com/
+
+search:
+  defaults:
+    title: Software Engineer
+    company: ''
+    location: India
+    keywords: golang backend
+
+limits:
+  max_connections_per_day: 20
+  max_messages_per_day: 50
+  max_profiles_per_search: 200
+
+stealth:
+  headless: false
+  enable_human_mouse: true
+  enable_random_scroll: true
+  enable_type_typos: true
+  enable_hover_wander: true
+  enable_breaks: true
+  user_agent: ''
+  min_delay_ms: 120
+  max_delay_ms: 900
+  viewport_width_min: 1280
+  viewport_width_max: 1680
+  viewport_height_min: 720
+  viewport_height_max: 1050
+  # Active hours window - bot will log a warning if run outside these hours
+  # Set to 00:00 - 23:59 to allow running anytime (recommended for testing)
+  # Set to business hours like 09:00 - 18:00 for more natural behavior
+  active_start: '00:00'
+  active_end: '23:59'
+
+templates:
+  connection_note_template: "Hi {{Name}}, noticed your work at {{Company}} as {{Title}}—would love to connect."
+  follow_up_message_template: "Thanks for connecting, {{Name}}! If helpful, happy to share ideas around {{Keywords}}."
+
+database:
+  path: linkedbot.db
+
+logging:
+  level: info
